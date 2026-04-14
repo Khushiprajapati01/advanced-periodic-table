@@ -13,7 +13,7 @@ An interactive and beautiful Periodic Table of all 118 elements with detailed in
 
 ## 🚀 Live Demo
 
-[→ Open Periodic Table](https://khushiprajapati01.github.io/advanced-periodic-table/)
+[→ Open Periodic Table](https://khushiprajapati01.github.io/advanced-periodic-table/ live demo).
 
 ## 🛠️ Technologies Used
 
