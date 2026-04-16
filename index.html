@@ -1,68 +1,37 @@
 <!DOCTYPE html>
-<html lang="hi">
-<head>
+<html lang="en">
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassGen - Secure Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1><i class="fas fa-shield-alt"></i> PassGen</h1>
-            <p>Generate Strong & Secure Passwords</p>
-        </div>
-     <div class="password-display">
-            <input type="text" id="password" readonly placeholder="Your password will appear here">
-            <button id="copyBtn" class="copy-btn">
-                <i class="fas fa-copy"></i>
-            </button>
-        </div>
+    <title>Anime.js Periodic Table Auto Layout animation</title><link rel="stylesheet" href="style.css">
 
-        <div class="strength-container">
-            <div class="strength-bar">
-                <div id="strengthBar" class="strength-fill"></div>
-            </div>
-            <span id="strengthText" class="strength-label">Strength</span>
-        </div>
+  </head>
+    
+  <body>
+  <div class="controls">
+  <div class="controls-group display br">
+    <button class="is-active toggle" id="table">table</button>
+    <button class="toggle" id="sphere">sphere</button>
+    <button class="toggle" id="helix">helix</button>
+    <button class="toggle" id="grid">grid</button>
+  </div>
+</div>
+<div id="scene">
+  <div id="scene-content" data-layout="table"></div>
+</div>
+<div class="credits">
+  3D transform calculations ported from this three.js <a href="https://threejs.org/examples/css3d_periodictable.html" target="_blank">demo</a>.
+</div>
+<template id="element">
+  <button class="element" data-color="0">
+    <div class="element-number"></div>
+    <div class="element-symbol"></div>
+    <div class="element-title"></div>
+    <div class="element-description"></div>
+  </button>
+</template>
+    <script type="module" src="./script.js"></script>
 
-        <div class="controls">
-            <div class="slider-container">
-                <label>Password Length: <span id="lengthValue">16</span></label>
-                <input type="range" id="lengthSlider" min="6" max="32" value="16" step="1">
-            </div>
-
-            <div class="checkboxes">
-                <label class="check-label">
-                    <input type="checkbox" id="upper" checked>
-                    <span>Uppercase (A-Z)</span>
-                </label>
-                <label class="check-label">
-                    <input type="checkbox" id="lower" checked>
-                    <span>Lowercase (a-z)</span>
-                </label>
-                <label class="check-label">
-                    <input type="checkbox" id="numbers" checked>
-                    <span>Numbers (0-9)</span>
-                </label>
-                <label class="check-label">
-                    <input type="checkbox" id="symbols" checked>
-                    <span>Symbols (!@#$%^&*)</span>
-                </label>
-            </div>
-        </div>
-
-        <button id="generateBtn" class="generate-btn">
-            <i class="fas fa-magic"></i> Generate Secure Password
-        </button>
-
-        <div class="history-section">
-            <h3>Recent Passwords</h3>
-            <ul id="historyList"></ul>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
+  
 </html>
